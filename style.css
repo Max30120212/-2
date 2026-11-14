@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #120491; /* Базовий колір замість старого складного градієнта */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+h1 {
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.minigame {
+    color: #4f56e5;
+    font-size: 36px;
+}
+
+.subtitle {
+    color: #035f83;
+    font-size: 24px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-btn {
+    width: 100%;
+    background-color: #4f46e5;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.back-btn:hover {
+    color: #4338ca;
+    background: none;
+    transform: none;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #4f46e5;
+}
+
+/* Стиль для палітри вибору кольору фону */
+#bg-color-picker {
+    border: none;
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: none;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.rps-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.rps-choice {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.message {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    min-height: 24px;
+}
+
+.stats {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.choice {
+    font-size: 17px;
+}
+
+.rps-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#restart-btn {
+    width: 100%;
+    background-color: #10b981;
+}
+
+#restart-btn:hover {
+    background-color: #059669;
+}

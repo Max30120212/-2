@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Міні-ігри</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-card">
+        
+        <!-- Головне меню -->
+        <div id="menu-screen">
+            <h1 class="minigame">🎮 Вибери міні-гру</h1>
+            <p class="subtitle">У що хочеш зіграти сьогодні?</p>
+            
+            <div id="player-name-display" style="margin-bottom: 15px; font-weight: bold; color: #4f46e5;"></div>
+
+            <div class="menu-buttons">
+                <button id="to-guess-game" class="menu-btn">🎲 Вгадай число</button>
+                <button id="to-rps-game" class="menu-btn">✂️ Камінь, ножиці, папір</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <label for="bg-color-picker">Змінити фон: </label>
+                <input type="color" id="bg-color-picker" value="#ffffff">
+            </div>
+        </div>
+         
+        <!-- Гра: Вгадай число -->
+        <div id="guess-screen" class="hidden">
+            <button class="back-btn" id="back-to-menu-1">⬅ Назад до меню</button>
+            <h1>🎲 Вгадай число</h1>
+            <p class="subtitle">Я загадав число від 1 до 100. Спробуй відгадати його за мінімальну кількість спроб!</p>
+            
+            <div class="input-area">
+                <input type="number" id="user-input" min="1" max="100" placeholder="Введіть число...">
+                <button id="guess-btn">Перевірити</button>
+            </div>
+
+            <div id="message" class="message"></div>
+            <div class="stats">
+                <span>Спроби: <strong id="attempts">0</strong></span>
+            </div>
+
+            <button id="restart-btn" class="hidden">Грати знову</button>
+        </div>
+
+        <!-- Гра: Камінь, ножиці, папір -->
+        <div id="rps-screen" class="hidden">
+            <button class="back-btn" id="back-to-menu-2">⬅ Назад до меню</button>
+            <h1>✂️ Камінь, ножиці, папір</h1>
+            <p class="subtitle">Зроби свій вибір та перевір удачу проти комп'ютера!</p>
+
+            <div class="rps-buttons">
+                <button class="rps-choice" data-choice="камінь">✊ Камінь</button>
+                <button class="rps-choice" data-choice="ножиці">✌️ Ножиці</button>
+                <button class="rps-choice" data-choice="папір">🖐️ Папір</button>
+            </div>
+
+            <div id="rps-message" class="message"></div>
+            
+            <div class="rps-stats stats">
+                <p>Твій вибір: <span id="player-choice" class="choice">-</span></p>
+                <p>Вибір комп'ютера: <span id="computer-choice" class="choice">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
